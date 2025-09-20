@@ -1,0 +1,24 @@
+# Django core
+Django==5.2.1
+
+# Database (MySQL)
+pymysql==1.1.0
+mysqlclient==2.2.4   # optional, but good if you want native MySQL support
+
+# REST API
+djangorestframework==3.15.2
+django-cors-headers==4.3.1
+
+# Environment variables
+python-decouple==3.8
+
+# Email handling (already in Django, but useful helpers)
+# no extra package required unless you want HTML emails
+
+# Deployment helpers
+gunicorn==23.0.0   # for production WSGI server
+whitenoise==6.7.0  # serve static files
+
+# Optional extras
+requests==2.32.3   # if you use external API calls
+Pillow==11.0.0     # if you need image uploads
