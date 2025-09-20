@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kamashka API Documentation</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+        .endpoint { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; border-left: 4px solid #007bff; }
+        .method { font-weight: bold; color: #007bff; display: inline-block; width: 60px; }
+        .url { font-family: monospace; background: #e9ecef; padding: 2px 5px; border-radius: 3px; }
+        h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
+        h2 { color: #495057; margin-top: 30px; }
+        .note { background: #fff3cd; padding: 10px; border-radius: 5px; border-left: 4px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <h1>Kamashka API Documentation</h1>
+    
+    <div class="note">
+        <strong>Note:</strong> All API endpoints return JSON responses unless otherwise specified.
+    </div>
+    
+    <h2>Job Postings Endpoints</h2>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <span class="url">/api/job-postings/</span></p>
+        <p>Returns a list of all active job postings with pagination.</p>
+    </div>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <span class="url">/api/job-postings/&lt;id&gt;/</span></p>
+        <p>Returns details of a specific job posting.</p>
+    </div>
+    
+    <h2>Blog Posts Endpoints</h2>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <span class="url">/api/blog-posts/</span></p>
+        <p>Returns a list of all published blog posts with pagination.</p>
+    </div>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <span class="url">/api/blog-posts/&lt;id&gt;/</span></p>
+        <p>Returns details of a specific blog post.</p>
+    </div>
+    
+    <h2>Job Applications Endpoint</h2>
+    
+    <div class="endpoint">
+        <p><span class="method">POST</span> <span class="url">/api/job-application/</span></p>
+        <p>Submits a new job application. Requires multipart/form-data encoding.</p>
+        <p><strong>Required fields:</strong> job_posting, full_name, email, phone, resume, consent_to_data_processing</p>
+        <p><strong>Optional fields:</strong> nationality, country, city, cover_letter</p>
+        <p><strong>File types allowed:</strong> PDF, DOC, DOCX (max 5MB)</p>
+    </div>
+    
+    <h2>Utility Endpoints</h2>
+    
+    <div class="endpoint">
+        <p><span class="method">GET</span> <span class="url">/api/resume/&lt;application_id&gt;/</span></p>
+        <p>Downloads a resume file for a specific application.</p>
+    </div>
+</body>
+</html>
